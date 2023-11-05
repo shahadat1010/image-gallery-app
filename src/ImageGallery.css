@@ -1,0 +1,73 @@
+/* ImageGallery.css */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .image-container {
+    border: 2px solid #fff;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .image-container.feature-image {
+    transform: scale(1.05);
+    border: 2px solid #007bff;
+  }
+  
+  .checkbox-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 4px;
+    display: none;
+  }
+  
+  .image-container:hover .checkbox-container {
+    display: block;
+  }
+  
+  .checkbox {
+    cursor: pointer;
+  }
+  
+  .feature-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .feature-button:hover {
+    background: #0056b3;
+  }
+  
+  .dragging-indicator {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  

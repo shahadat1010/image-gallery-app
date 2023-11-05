@@ -6,18 +6,9 @@ class ImageGallery extends React.Component {
     super(props);
     this.state = {
       images: [
-        { id: 1, src: 'image-1.webp', isFeature: false },
-        { id: 2, src: 'image-2.webp', isFeature: true },
-        { id: 3, src: 'image-3.webp', isFeature: false },
-        { id: 4, src: 'image-4.webp', isFeature: false },
-        { id: 5, src: 'image-5.webp', isFeature: false },
-        { id: 6, src: 'image-6.webp', isFeature: false },
-        { id: 7, src: 'image-7.webp', isFeature: false },
-        { id: 8, src: 'image-8.webp', isFeature: false },
-        { id: 9, src: 'image-9.webp', isFeature: false },
-        { id: 10, src: 'image-10.jpeg', isFeature: false },
-        { id: 10, src: 'image-11.jpeg', isFeature: false },
-
+        { id: 1, src: 'image1.jpg', isFeature: false },
+        { id: 2, src: 'image2.jpg', isFeature: true },
+        { id: 3, src: 'image3.jpg', isFeature: false },
       ],
       selectedImages: [],
       isDragging: false,
@@ -51,7 +42,6 @@ class ImageGallery extends React.Component {
     }
   };
   
-
   handleImageSelect = (id) => {
     const { selectedImages } = this.state;
     if (selectedImages.includes(id)) {
